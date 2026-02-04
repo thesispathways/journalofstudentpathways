@@ -1,0 +1,538 @@
+:root {
+    --primary-navy: #1F3A5F;
+    --secondary-teal: #2FA4A9;
+    --accent-orange: #F4A261;
+    --bg-offwhite: #F7F9FC;
+    --bg-lightgray: #EEF2F6;
+    --text-dark: #333333;
+    --text-gray: #777777;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-offwhite);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-navy);
+}
+
+img {
+    max-width: auto;
+    height: 150px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-lightgray);
+}
+
+.journal-logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.journal-logo .highlight {
+    color: var(--accent-orange);
+}
+
+.journal-nav a {
+    margin-left: 20px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.journal-nav a:hover {
+    color: var(--accent-orange);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-navy);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: white;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e08b3f;
+}
+
+/* Journal Features */
+.journal-features {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    background-color: var(--bg-lightgray);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 250px;
+}
+
+.feature h3 {
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+    background-color: var(--bg-offwhite);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.coming-soon h2 {
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+}
+
+.coming-soon p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Submission Info */
+.submission-info {
+    background-color: var(--bg-lightgray);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.submission-info h2 {
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--bg-lightgray);
+    color: var(--text-gray);
+}
+
+footer a {
+    color: var(--primary-navy);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .journal-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .journal-nav a {
+        margin: 5px 0;
+    }
+
+    .journal-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* About Page Hero */
+.about-hero {
+    background-color: var(--primary-navy);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* About Sections */
+.about-mission {
+    background-color: var(--bg-offwhite);
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.about-mission h2 {
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+}
+
+.about-mission p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* About Sections with Left Titles and Right Content */
+.about-sections {
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.about-item {
+    display: flex;
+    align-items: stretch; /* Make children stretch full height */
+    margin-bottom: 40px;
+    border-left: 4px solid var(--accent-orange); /* keep left orange line */
+    padding-left: 20px;
+}
+
+.about-item h2 {
+    flex: 0 0 200px; /* fixed width for title */
+    margin: 0;
+    color: var(--primary-navy);
+    text-align: left;
+    padding-right: 20px;
+    border-right: 2px solid var(--primary-navy); /* right vertical line */
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch; /* ensures h2 stretches to match content */
+}
+
+.about-item p,
+.about-item ul {
+    flex: 1;
+    margin: 0 0 0 20px;
+    line-height: 1.6;
+}
+
+.about-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.about-item a {
+    color: var(--secondary-teal);
+}
+
+.about-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive About Page Sections */
+@media (max-width: 768px) {
+    .about-item {
+        flex-direction: column;
+        border-left: 4px solid var(--accent-orange); /* keep orange line */
+        padding-left: 15px; /* small padding for mobile */
+    }
+
+    .about-item h2 {
+        flex: none;
+        border-right: none;  /* remove vertical line since stacked */
+        margin-bottom: 10px;
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .about-item p,
+    .about-item ul {
+        margin-left: 0;
+    }
+}
+
+:root {
+    --primary-navy: #1F3A5F;
+    --secondary-teal: #2FA4A9;
+    --accent-orange: #F4A261;
+    --bg-offwhite: #F7F9FC;
+    --bg-lightgray: #EEF2F6;
+    --text-dark: #333333;
+    --text-gray: #777777;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-offwhite);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-navy);
+}
+
+a:hover {
+    color: var(--secondary-teal);
+}
+
+img {
+    max-width: auto;
+    height: 150px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-lightgray);
+}
+
+.journal-logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.journal-logo .highlight {
+    color: var(--accent-orange);
+}
+
+.journal-nav a {
+    margin-left: 20px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.journal-nav a:hover {
+    color: var(--accent-orange);
+}
+
+/* Hero Section */
+.about-hero {
+    background-color: var(--primary-navy);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-info {
+    padding: 30px;
+}
+
+.contact-info h2 {
+    color: var(--primary-navy);
+    font-size: 1.5rem;
+    border-bottom: 3px solid var(--accent-orange);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: var(--secondary-teal);
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--bg-lightgray);
+    color: var(--text-gray);
+}
+
+footer a {
+    color: var(--primary-navy);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .journal-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .journal-nav a {
+        margin: 5px 0;
+    }
+}
+
+/* Mobile Hero and Contact */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-info h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-section {
+        padding: 0 15px;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+}
+
+/* Guidelines layout */
+.guidelines-section {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+
+/* Individual guideline cards */
+.guidelines-section .guideline-item {
+    background-color: white;
+    padding: 32px;
+    margin-bottom: 35px;
+    border-radius: 14px;
+    border-left: 6px solid var(--accent-orange);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+/* Titles */
+.guidelines-section .guideline-item h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+}
+
+/* Text */
+.guidelines-section .guideline-item p {
+    margin-bottom: 14px;
+    font-size: 1rem;
+}
+
+/* Lists */
+.guidelines-section .guideline-item ul {
+    padding-left: 22px;
+    margin-top: 10px;
+}
+
+.guidelines-section .guideline-item li {
+    margin-bottom: 9px;
+    line-height: 1.6;
+}
+
+/* Nested lists */
+.guidelines-section .guideline-item ul ul {
+    margin-top: 10px;
+    margin-left: 18px;
+    list-style-type: circle;
+}
+
+/* Highlight submission email ONLY on this page */
+.guidelines-section a[href^="mailto:"] {
+    background-color: var(--bg-lightgray);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .guidelines-section .guideline-item {
+        padding: 24px;
+    }
+
+    .guidelines-section .guideline-item h2 {
+        font-size: 1.35rem;
+    }
+}
